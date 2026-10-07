@@ -1,0 +1,15 @@
+﻿python : C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\onnx2pytorch\convert\model.py:47: UserWarning: 
+Model imports domains that are not understood: ai.onnx.ml.
+At line:1 char:32
++ $env:PYTHONIOENCODING='utf-8'; python -u run_app.py 2>&1 | Out-File - ...
++                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\Anoop\...od: ai.onnx.ml.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+[MesoNet] No weights found at 'checkpoints/mesonet.pth'. MesoNet branch will be skipped (EfficientNet used alone).
+inference_2 import ok
+gradio import ok
+launching
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.

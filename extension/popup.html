@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthCheck</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="title-bar">
+    <div class="title-bar-left">
+      <img src="icons/icon48.png" alt="TruthCheck" class="title-logo" />
+      <h1>TruthCheck</h1>
+      <span id="health-dot" class="dot" title="Backend status"></span>
+    </div>
+    <div class="title-bar-actions">
+      <button class="refresh-button" id="refreshButton" aria-label="Refresh" data-tooltip="Refresh · R">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12a9 9 0 1 1-2.64-6.36"></path>
+          <path d="M21 3v6h-6"></path>
+        </svg>
+      </button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-tooltip="Theme · T">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+      </button>
+      <button class="options-button" id="optionsButton" aria-label="Settings" data-tooltip="Settings · S">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="status-section">
+      <p class="subtitle" id="subtitle">Verify before you trust.</p>
+    </div>
+
+    <div class="confidence-section">
+      <div class="confidence-header">
+        <span class="confidence-title">Confidence Score</span>
+        <span class="confidence-label" id="confidenceLabel">—</span>
+      </div>
+      <div class="confidence-circle-container">
+        <div class="confidence-circle" id="confidenceCircle">
+          <svg class="circle-svg" viewBox="0 0 120 120">
+            <circle class="circle-bg" cx="60" cy="60" r="54"></circle>
+            <circle class="circle-progress" id="circleProgress" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="confidence-value-container">
+            <span class="confidence-value" id="confidenceValue">0</span>
+            <span class="confidence-unit">%</span>
+          </div>
+        </div>
+        <div class="verdict-container">
+          <div class="verdict-label">Verdict</div>
+          <div class="verdict-text" id="badge">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="analyze-section">
+      <div class="tabs">
+        <button class="tab active" data-tab="text">📝 TEXT</button>
+        <button class="tab" data-tab="image">🖼️ IMAGE</button>
+        <button class="tab" data-tab="video">🎬 VIDEO</button>
+        <button class="tab" data-tab="audio">🎧 AUDIO</button>
+      </div>
+
+      <div id="tab-text" class="tabpage">
+        <textarea id="textInput" placeholder="Paste news, article, message or claim here..."></textarea>
+        <button id="analyzeTextBtn" class="analyze-button">Analyze Text</button>
+      </div>
+
+      <div id="tab-image" class="tabpage hidden">
+        <div id="imageDrop" class="dropzone">Drag &amp; Drop Image<br/>or <label class="link">Choose Image<input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp" hidden/></label></div>
+        <img id="imagePreview" class="preview hidden"/>
+        <button id="analyzeImageBtn" class="analyze-button">Analyze Image</button>
+      </div>
+
+      <div id="tab-video" class="tabpage hidden">
+        <div id="videoDrop" class="dropzone">Drag &amp; Drop Video<br/>or <label class="link">Choose Video<input type="file" id="videoInput" accept="video/mp4,video/avi,video/quicktime,video/webm" hidden/></label></div>
+        <video id="videoPreview" class="preview hidden" controls muted></video>
+        <button id="analyzeVideoBtn" class="analyze-button">Analyze Video</button>
+      </div>
+
+      <div id="tab-audio" class="tabpage hidden">
+        <div id="audioDrop" class="dropzone">Drag &amp; Drop Audio<br/>or <label class="link">Choose Audio<input type="file" id="audioInput" accept="audio/*,.wav,.mp3,.flac,.ogg,.m4a,.aac" hidden/></label></div>
+        <audio id="audioPreview" class="preview hidden" controls></audio>
+        <button id="analyzeAudioBtn" class="analyze-button">Analyze Audio</button>
+      </div>
+
+      <div id="loading" class="loading hidden"><div class="spinner"></div><span id="loadingText">Analyzing...</span></div>
+    </div>
+
+    <div class="details-section hidden" id="result">
+      <div class="section-header">
+        <span class="section-title">Details</span>
+      </div>
+      <div class="meta" id="meta"></div>
+
+      <div class="section-header signals-header">
+        <span class="section-title">Signals</span>
+        <span class="pattern-count" id="signalCount">0</span>
+      </div>
+      <ul class="pattern-list" id="signals"></ul>
+    </div>
+
+    <p class="hint" id="hint">Right-click selected text, an image or a video and choose TruthCheck — or use the tabs above (TEXT · IMAGE · VIDEO · AUDIO).</p>
+  </div>
+
+  <footer class="footer">
+    <span class="team">Team SyntaxX</span>
+    <button class="link-button" id="footerSettings">Settings</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

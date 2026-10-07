@@ -1,0 +1,6 @@
+input_image,output,timestamp
+.gradio\flagged\input_image\cff00dcefe2bf32da381\images.jpg,"✅ VERDICT: REAL / AUTHENTIC IMAGE
+───────────────────────────────────
+• Result          : AUTHENTIC MEDIA
+• Confidence Score: 99.79%
+• Analysis        : Natural, unmanipulated facial features confirmed.",2026-10-06 11:05:42.629251

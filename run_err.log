@@ -1,0 +1,3018 @@
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\onnx2pytorch\convert\model.py:47: UserWarning: Model imports domains that are not understood: ai.onnx.ml.
+  warnings.warn(
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\ce2a47317d0eae09363b8029f63c4ebbc9e6bf368629315fcf07aabc66f67395\\Fliki_sample.mp3', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUser... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\ce2a47317d0eae09363b8029f63c4ebbc9e6bf368629315fcf07aabc66f67395\\Fliki_sample.mp3', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUser... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\ce2a47317d0eae09363b8029f63c4ebbc9e6bf368629315fcf07aabc66f67395\\Fliki_sample.mp3', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUser... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+  warn("Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work", RuntimeWarning)
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 748, in audio_from_file
+    audio = AudioSegment.from_file(filename)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\audio_segment.py", line 728, in from_file
+    info = mediainfo_json(orig_file, read_ahead_limit=read_ahead_limit)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydub\utils.py", line 274, in mediainfo_json
+    res = Popen(command, stdin=stdin_parameter, stdout=PIPE, stderr=PIPE)
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2181, in preprocess_data
+    processed_value = await anyio.to_thread.run_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block.preprocess, inputs_cached, limiter=self.limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\components\audio.py", line 262, in preprocess
+    return processing_utils.audio_from_file(payload.path)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\processing_utils.py", line 758, in audio_from_file
+    raise RuntimeError(msg) from e
+RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2187, in preprocess_data
+    raise ComponentProcessingError(
+    ...<8 lines>...
+    ) from err
+gradio.exceptions.ComponentProcessingError: Could not preprocess input component at index 0 (a `audio` component) of the event handler (named "deepfakes_spec_predict") with input components: [audio].
+
+Expected a `FileData | None`, but the value passed to the event handler was: {'path': 'C:\\Users\\Anoop\\AppData\\Local\\Temp\\gradio\\6e41c318829231bd1b6c5d7292309891744744a14447bb09e1700a80344c9ae4\\DF_E_2000027.flac', 'url': 'http://127.0.0.1:7860/gradio_api/file=C%3A%5CUse... (of type `dict`).
+
+Original error: RuntimeError: Cannot load audio from file: `ffprobe` not found. Please install `ffmpeg` in your system to use non-WAV audio file formats and make sure `ffprobe` is in your PATH.
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2167, in preprocess_data
+    inputs_cached = data_model.model_validate(
+        inputs_cached, context={"validate_meta": True}
+    )
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydantic\main.py", line 732, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        obj,
+        ^^^^
+    ...<5 lines>...
+        by_name=by_name,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ImageData
+  Input should be a valid dictionary or instance of ImageData [type=model_type, input_value='images/lady.jpg', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/model_type
+Traceback (most recent call last):
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\queueing.py", line 848, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\route_utils.py", line 417, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2692, in process_api
+    inputs = await self.preprocess_data(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        block_fn, inputs, state, explicit_call
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\gradio\blocks.py", line 2167, in preprocess_data
+    inputs_cached = data_model.model_validate(
+        inputs_cached, context={"validate_meta": True}
+    )
+  File "C:\Users\Anoop\AppData\Roaming\Python\Python313\site-packages\pydantic\main.py", line 732, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        obj,
+        ^^^^
+    ...<5 lines>...
+        by_name=by_name,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ImageData
+  Input should be a valid dictionary or instance of ImageData [type=model_type, input_value='images/lady.jpg', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.13/v/model_type

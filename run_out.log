@@ -1,0 +1,6 @@
+[MesoNet] No weights found at 'checkpoints/mesonet.pth'. MesoNet branch will be skipped (EfficientNet used alone).
+inference_2 import ok
+gradio import ok
+launching
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
